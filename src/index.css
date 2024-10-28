@@ -1,0 +1,27 @@
+.app {
+  display: flex;
+  gap: 20px;
+}
+
+.filters {
+  width: 250px;
+}
+
+.filter-section {
+  margin-bottom: 20px;
+}
+
+.ticket-list {
+  width: 100%;
+}
+
+.ticket {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.ticket h4 {
+  margin: 0 0 10px;
+}

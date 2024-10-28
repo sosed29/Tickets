@@ -1,0 +1,440 @@
+.app {
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 34px;
+}
+
+h1 {
+  color: #4a148c;
+  font-size: 24px;
+  text-align: left;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 47px;
+}
+
+.filter-group {
+  width: 200px;
+  padding: 20px;
+  background-color: rgba(232, 235, 242, 1);
+  border-radius: 10px;
+}
+
+h4 {
+  color: rgba(78, 20, 140, 1);
+  font-size: 16px;
+
+}
+
+label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 21px;
+  color: rgba(133, 138, 227, 1);
+}
+
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: none;
+}
+
+
+.checkbox-custom {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border: 1px solid rgba(78, 20, 140, 1);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.checkbox-custom::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 14px;
+  background-image: url('../src/img/checkmark.png');
+  background-size: cover;
+  display: none;
+}
+
+
+input[type="checkbox"]:checked+.checkbox-custom::after {
+  display: block;
+}
+
+
+.radio-custom {
+  position: relative;
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  margin-right: 10px;
+  border: 1px solid rgba(78, 20, 140, 1);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.radio-custom::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: rgba(78, 20, 140, 1);
+  display: none;
+}
+
+
+input[type="checkbox"]:checked+.radio-custom::after {
+  display: block;
+}
+
+
+.ticket-section {
+  grid-column: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: -511px;
+  width: 100%;
+}
+
+.sort-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sort-button {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid rgba(78, 20, 140, 1);
+  color: rgba(78, 20, 140, 1);
+  cursor: pointer;
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 19.36px;
+  background: rgba(232, 235, 242, 1);
+
+}
+
+.sort-button.active {
+  background-color: #4a148c;
+  color: white;
+}
+
+.three-tickets {
+  display: flex;
+  flex-direction: column;
+  gap: 47px;
+}
+
+.ticket {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 40px 20px 50px 22px;
+  background: rgba(232, 235, 242, 1);
+  border-radius: 8px;
+  height: 120px;
+
+}
+
+
+.ticket-price {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4a148c;
+}
+
+.ticket-details {
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
+.ticket-route,
+.duration,
+.transfers-title {
+  color: rgba(133, 138, 227, 1);
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.36px;
+}
+
+.time,
+.duration-time,
+.transfers-amount {
+  color: rgba(78, 20, 140, 1);
+
+}
+
+.ticket-route-time {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-top: 25px;
+
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.36px;
+  color: rgba(78, 20, 140, 1);
+}
+
+.ticket-logo {
+  margin-bottom: 44px;
+}
+
+.ticket-transfers {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.ticket-company {
+  font-size: 18px;
+  font-weight: bold;
+  color: #4a148c;
+}
+
+.ticket-logo-transfers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ticket-duration {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.load-more-button {
+  padding: 10px;
+  background-color: #4a148c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 20px;
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29.05px;
+}
+
+.filters-dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 47px;
+}
+
+.filters-header {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: rgba(78, 20, 140, 1);
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.toggle-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.arrow {
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+
+
+.toggle-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+
+
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+.filters-dropdown open {
+  display: flex;
+}
+
+
+@media (max-width: 793px) {
+  .header {
+    justify-content: center;
+  }
+
+  h1 {
+    display: none;
+  }
+
+  .layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .ticket-section {
+    margin-top: 0px;
+  }
+
+  .filters {
+    display: flex;
+    flex-direction: row-reverse;
+    background: rgba(78, 20, 140, 1);
+  }
+
+  .filter-group {
+    background: rgba(78, 20, 140, 1);
+  }
+
+  label {
+    color: rgba(247, 249, 247, 1);
+  }
+
+  .radio-custom,
+  .checkbox-custom {
+    border: 1px solid rgba(247, 249, 247, 1)
+  }
+
+  h4 {
+    color: rgba(247, 249, 247, 1);
+
+  }
+
+  .radio-custom::after {
+
+    background: rgba(247, 249, 247, 1);
+
+  }
+
+  .filters-header {
+    display: flex;
+
+  }
+
+  .filters-dropdown {
+    display: none;
+
+  }
+
+  .filters-dropdown.open {
+
+    display: flex;
+    align-items: stretch;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 0px;
+  }
+
+  .filters-wrapper {
+    width: 100%;
+    background: rgba(78, 20, 140, 1);
+    border-radius: 8px;
+    order: 0;
+  }
+
+  .sort-buttons-wrapper {
+    order: -1;
+    width: 100%;
+  }
+
+  .filters-dropdown open {
+    display: flex;
+    flex-direction: row-reverse;
+    background: rgba(78, 20, 140, 1);
+    justify-content: flex-end;
+  }
+  .sort-button {
+    background: rgba(217, 217, 217, 1);
+
+  }
+}
+
+  @media (min-width: 793px) {
+  .filters-header {
+    display: none;
+
+  }
+}
+
+.header-title-mobile {
+  display: none;
+}
+
+
+@media (max-width: 621px) {
+  .header-title {
+    display: none;
+  }
+
+  .header-title-mobile {
+    display: inline;
+
+  }
+
+  .toggle-button-text {
+    display: none;
+  }
+
+  .sort-button {
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14.52px;
+
+  }
+ 
+}
